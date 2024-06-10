@@ -5,8 +5,8 @@ import { Mail, Sparkle, Star } from "lucide-react";
 
 export default function Home() {
   return (
-    <>
-      <div className="relative pb-10 pt-20">
+    <div className="flex min-h-[calc(100vh-3.5rem)] flex-col">
+      <div className="relative flex max-h-[650px] grow items-center pb-10 pt-20">
         <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] after:absolute after:bottom-0 after:left-0 after:right-0 after:z-10 after:h-12 after:bg-gradient-to-t after:from-white after:to-transparent"></div>
         <div className="container flex max-w-4xl flex-col items-center">
           <h1 className="text-center text-3xl font-medium tracking-tight md:text-6xl">
@@ -36,6 +36,6 @@ export default function Home() {
           <CarouselView />
         </div>
       </div>
-    </>
+    </div>
   );
 }
