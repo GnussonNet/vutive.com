@@ -18,7 +18,12 @@ const CarouselView = () => {
   const [count, setCount] = React.useState(0);
 
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true }),
+    Autoplay({
+      delay: 3000,
+      stopOnInteraction: false,
+      stopOnFocusIn: true,
+      stopOnMouseEnter: true,
+    }),
   );
 
   React.useEffect(() => {
@@ -42,8 +47,6 @@ const CarouselView = () => {
         loop: true,
       }}
       plugins={[plugin.current]}
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
     >
       <div className="relative">
         <CarouselContent>
